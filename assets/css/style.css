@@ -1,0 +1,92 @@
+@import url(https://fonts.googleapis.com/css2?family=Ubuntu:wght@100;200;300;400;500;600;700&display=swap);
+
+:root {
+    --primary-clr: #ed1c24;
+    --secondary-clr: #2e3192;
+    --gray-clr: #58585a;
+    --lightgray-clr: #cfcbca;
+    --white-clr: #fff;
+    --black-clr: #000;
+}
+
+/* ====================================== Utilities ====================================== */
+.primary-bg {
+    background: var(--primary-clr);
+}
+
+/* ====================================== Utilities ====================================== */
+body {
+    font-family: "Ubuntu Regular", sans-serif;
+}
+
+.top-nav-collapse {
+    background-color: var(--primary-clr);
+}
+
+.navbar:not(.top-nav-collapse) {
+    background: transparent !important;
+}
+
+.nav-link::after,
+.nav-link.dropdown-toggle::after {
+    content: "";
+    width: 0;
+    height: 2px;
+    background: var(--secondary-clr);
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nav-link:hover::after,
+.nav-link.dropdown-toggle:hover::after {
+    width: 100%;
+    transition: 0.5s;
+}
+
+.heading-after::after {
+    content: "";
+    width: 5%;
+    height: 3px;
+    background: var(--primary-clr);
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+@media (max-width: 991px) {
+    .navbar:not(.top-nav-collapse) {
+        background: var(--primary-clr) !important;
+    }
+}
+
+/* ============ only desktop view ============ */
+@media all and (min-width: 992px) {
+    .navbar .nav-item .dropdown-menu {
+        display: block;
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.3s;
+        margin-top: 0;
+    }
+
+    .navbar .dropdown-menu.fade-down {
+        top: 80%;
+        transform: rotateX(-75deg);
+        transform-origin: 0% 0%;
+    }
+
+    .navbar .dropdown-menu.fade-up {
+        top: 180%;
+    }
+
+    .navbar .nav-item:hover .dropdown-menu {
+        transition: 0.3s;
+        opacity: 1;
+        visibility: visible;
+        top: 100%;
+        transform: rotateX(0deg);
+    }
+}
+
+/* ============ desktop view .end// ============ */
