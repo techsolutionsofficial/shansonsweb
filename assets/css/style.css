@@ -32,6 +32,12 @@ h5,
 h6 {
     color: var(--secondary-clr);
 } */
+.carousel-caption {
+    /* top: 40%;
+     right: 50%; */
+    bottom: 60%;
+    left: -50%;
+}
 
 .about-us-logo {
     transform: scale(1);
