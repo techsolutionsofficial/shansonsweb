@@ -76,10 +76,16 @@ h6 {
 .dropright .dropdown-menu.dropdown-red .dropdown-item:hover,
 .dropright .dropdown-menu.dropdown-red .dropdown-item:active,
 .dropright .dropdown-menu.dropdown-red .dropdown-item.active {
-  background-color: var(--primary-clr) !important;
-  border-radius: .125rem;
-  -webkit-box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
-  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15)
+    background-color: var(--primary-clr) !important;
+    border-radius: .125rem;
+    -webkit-box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15)
+}
+
+.dropdown-success .dropdown-content li.active,
+.dropdown-success .dropdown-content li a,
+.dropdown-success .dropdown-content li span:hover {
+    background-color: var(--primary-clr) !important
 }
 
 /* ====================================== Utilities ====================================== */
@@ -95,21 +101,34 @@ body {
     background: transparent !important;
 }
 
+.nav-link,
+.nav-link.dropdown-toggle {
+    color: var(--white-clr);
+    transition: all 0.6s ease-in-out;
+}
+
+.nav-link:hover,
+.nav-link.dropdown-toggle:hover {
+    color: var(--white-clr) !important;
+    transition: all 0.6s ease-in-out;
+}
+
 .nav-link::after,
 .nav-link.dropdown-toggle::after {
     content: "";
     width: 0;
     height: 2px;
-    background: var(--secondary-clr);
+    /* background: var(--secondary-clr); */
+    background: var(--primary-clr);
     display: block;
     margin: auto;
-    transition: 0.5s;
+    transition: all 0.6s ease-in-out;
 }
 
 .nav-link:hover::after,
 .nav-link.dropdown-toggle:hover::after {
     width: 100%;
-    transition: 0.5s;
+    transition: all 0.6s ease-in-out;
 }
 
 .heading-after::after {
@@ -119,7 +138,7 @@ body {
     background: var(--primary-clr);
     display: block;
     margin: auto;
-    transition: 0.5s;
+    transition: all 0.6s ease-in-out;
 }
 
 @media (max-width: 991px) {
