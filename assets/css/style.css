@@ -64,6 +64,24 @@ h6 {
     transition: all 0.6s ease-in-out;
 }
 
+.dropdown .dropdown-menu.dropdown-red .dropdown-item:hover,
+.dropdown .dropdown-menu.dropdown-red .dropdown-item:active,
+.dropdown .dropdown-menu.dropdown-red .dropdown-item.active,
+.dropup .dropdown-menu.dropdown-red .dropdown-item:hover,
+.dropup .dropdown-menu.dropdown-red .dropdown-item:active,
+.dropup .dropdown-menu.dropdown-red .dropdown-item.active,
+.dropleft .dropdown-menu.dropdown-red .dropdown-item:hover,
+.dropleft .dropdown-menu.dropdown-red .dropdown-item:active,
+.dropleft .dropdown-menu.dropdown-red .dropdown-item.active,
+.dropright .dropdown-menu.dropdown-red .dropdown-item:hover,
+.dropright .dropdown-menu.dropdown-red .dropdown-item:active,
+.dropright .dropdown-menu.dropdown-red .dropdown-item.active {
+  background-color: var(--primary-clr) !important;
+  border-radius: .125rem;
+  -webkit-box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15)
+}
+
 /* ====================================== Utilities ====================================== */
 body {
     font-family: "Ubuntu Regular", sans-serif;
